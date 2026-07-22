@@ -1,0 +1,121 @@
+.why-section{
+
+    margin:120px auto;
+}
+
+.why-title{
+
+    text-align:center;
+
+    font-size:2.7rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.why-subtitle{
+
+    text-align:center;
+
+    color:#6c757d;
+
+    margin-bottom:60px;
+
+    font-size:1.1rem;
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+}
+
+.why-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    border:1px solid #eee;
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.why-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    margin-bottom:25px;
+}
+
+.why-icon i{
+
+    font-size:45px;
+}
+
+.why-card h4{
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+}
+
+.why-card p{
+
+    color:#6c757d;
+
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.why-title{
+
+font-size:2rem;
+
+}
+
+.why-card{
+
+padding:30px;
+
+}
+
+}

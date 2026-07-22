@@ -1,0 +1,316 @@
+
+/* ===========================
+   HOW IT WORKS
+=========================== */
+
+.how-section {
+
+    padding: 120px 0;
+
+    background: #ffffff;
+
+    position: relative;
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.section-title span {
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    background: #eaf3ff;
+
+    color: #0d6efd;
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 18px;
+
+}
+
+.section-title h2 {
+
+    font-size: 2.8rem;
+
+    font-weight: 800;
+
+    color: #222;
+
+    margin-bottom: 20px;
+
+}
+
+.section-title p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.how-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    border:1px solid #e9eef8;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+.how-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#0d6efd;
+
+    box-shadow:0 20px 50px rgba(13,110,253,.15);
+
+}
+
+/* ===========================
+   STEP NUMBER
+=========================== */
+
+.step-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    color: rgba(13,110,253,.08);
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.how-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: auto;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #eef5ff;
+
+    transition: .35s;
+
+}
+
+.how-icon i {
+
+    font-size: 42px;
+
+    color: #0d6efd;
+
+    transition: .35s;
+
+}
+
+.how-card:hover .how-icon {
+
+    background: #0d6efd;
+
+}
+
+.how-card:hover .how-icon i {
+
+    color: white;
+
+    transform: scale(1.15);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.how-card h4 {
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    color: #222;
+
+}
+
+.how-card p {
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+
+    margin: 0;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+    .how-section{
+
+        padding:90px 0;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .how-card{
+
+        padding:35px 25px;
+
+    }
+
+    .how-icon{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .how-icon i{
+
+        font-size:36px;
+
+    }
+
+    .section-title h2{
+
+        font-size:1.9rem;
+
+    }
+
+}
+
+/* ===========================
+   ARROWS
+=========================== */
+
+.how-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    right:-28px;
+
+    transform:translateY(-50%);
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 12px 25px rgba(13,110,253,.15);
+
+    z-index:10;
+
+}
+
+.how-arrow i{
+
+    font-size:34px;
+
+    color:#0d6efd;
+
+}
+
+/* Hide arrows on mobile */
+
+@media(max-width:991px){
+
+.how-arrow{
+
+display:none;
+
+}
+
+}
+
+

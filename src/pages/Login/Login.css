@@ -1,0 +1,266 @@
+.bookverse-login-page{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left, #3b82f6, transparent 35%),
+    radial-gradient(circle at bottom right, #1e40af, transparent 40%),
+    linear-gradient(135deg,#0b3c91,#061b45);
+
+}
+
+
+
+.bookverse-login-page *{
+
+    box-sizing:border-box;
+   
+    
+
+}
+
+
+
+
+.bookverse-login-card{
+
+    width:400px;
+    padding:35px 40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.75);
+
+    backdrop-filter:blur(12px);
+
+    border:none;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.25);
+
+}
+
+
+
+/* Title */
+
+.bookverse-login-title{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#0b3c91;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin:0 0 15px;
+
+}
+
+
+
+.bookverse-login-title i{
+
+    font-size:38px;
+
+}
+
+
+
+
+/* Subtitle */
+
+.bookverse-login-subtitle{
+
+    text-align:center;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+/* Inputs */
+
+.bookverse-login-input{
+
+    width:100%;
+
+    height:50px;
+
+    padding:0 15px;
+
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:white;
+
+}
+
+
+
+.bookverse-login-input:focus{
+
+    border-color:#0b3c91;
+
+    box-shadow:0 0 10px rgba(11,60,145,0.25);
+
+}
+
+
+
+
+/* Button */
+
+.bookverse-login-button{
+
+    width:100%;
+
+    height:50px;
+
+    margin-top:5px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0b3c91;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:0.3s;
+
+}
+
+
+
+.bookverse-login-button:hover{
+
+    background:#06275f;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+/* Messages */
+
+.login-message{
+
+    margin-top:20px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+}
+
+
+
+.login-error{
+
+    background:#ffe5e5;
+
+    color:#b91c1c;
+
+}
+
+
+
+.login-success{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+}
+
+
+
+
+@media(max-width:500px){
+
+    .bookverse-login-card{
+
+        width:90%;
+
+        padding:30px 25px;
+
+    }
+
+
+    .bookverse-login-title{
+
+        font-size:22px;
+
+    }
+
+
+}
+.bookverse-login-card input,
+.bookverse-login-card button {
+
+    position: static !important;
+
+    transform: none !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+}

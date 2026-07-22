@@ -1,0 +1,293 @@
+.Header {
+
+  background-image: url("../../Images/Header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  margin-top: 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+
+/* Overlay */
+.Header::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+/* Content */
+.header-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  color: white;
+
+  width: 90%;
+
+  max-width: 950px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+
+/* Book Icon */
+.header-content i {
+
+  font-size: 75px;
+
+  color: #60a5fa;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/* Main Title */
+.header-content h1 {
+
+  font-size: 64px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+/* Subtitle */
+.header-content h2 {
+
+  font-size: 34px;
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+/* Description */
+.header-content p {
+
+  font-size: 22px;
+
+  line-height: 1.8;
+
+  max-width: 800px;
+
+  color: #f1f5f9;
+
+  margin-bottom: 55px;
+
+}
+
+
+
+/* Statistics */
+.stats {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 70px;
+
+  flex-wrap: wrap;
+
+}
+
+
+
+.stat {
+
+  min-width: 130px;
+
+}
+
+
+
+/* Numbers */
+.stat h3 {
+
+  color: #60a5fa;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  margin-bottom: 8px;
+
+  transition: 0.3s;
+
+}
+
+
+
+/* Labels */
+.stat span {
+
+  font-size: 20px;
+
+  color: white;
+
+  font-weight: 500;
+
+}
+
+
+
+/* Hover Effect */
+.stat:hover h3 {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+
+
+  .header-content h1 {
+
+    font-size: 52px;
+
+  }
+
+
+
+  .header-content h2 {
+
+    font-size: 28px;
+
+  }
+
+
+
+  .header-content p {
+
+    font-size: 20px;
+
+  }
+
+
+
+  .stat h3 {
+
+    font-size: 32px;
+
+  }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+  .Header {
+
+    min-height: 90vh;
+
+    padding: 40px 20px;
+
+  }
+
+
+
+  .header-content i {
+
+    font-size: 55px;
+
+  }
+
+
+
+  .header-content h1 {
+
+    font-size: 40px;
+
+  }
+
+
+
+  .header-content h2 {
+
+    font-size: 24px;
+
+  }
+
+
+
+  .header-content p {
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+
+  }
+
+
+
+  .stats {
+
+    gap: 30px;
+
+  }
+
+
+
+  .stat h3 {
+
+    font-size: 28px;
+
+  }
+
+
+
+  .stat span {
+
+    font-size: 17px;
+
+  }
+
+
+}

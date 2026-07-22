@@ -1,0 +1,18 @@
+@media screen and (min-width:990px) {
+    .hellow{
+      position: relative;
+      left: 800px;
+
+    }
+
+    
+}
+.footer-heart {
+  color: #1a3d8f; /* نفس لون البراند الأزرق بدل الأحمر */
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.footer-heart:hover {
+  color: #e63946; /* يتلون أحمر بس وقت الـ hover كتفاعل بصري */
+}

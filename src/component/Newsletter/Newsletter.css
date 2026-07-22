@@ -1,0 +1,165 @@
+.newsletter-section {
+  margin: 120px 0;
+}
+
+.newsletter-box {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b4fd9, #083ea9);
+  border-radius: 28px;
+  padding: 70px 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+}
+
+/* Decorative circles */
+
+.newsletter-box::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, .08);
+  border-radius: 50%;
+  top: -120px;
+  left: -90px;
+}
+
+.newsletter-box::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: rgba(255, 255, 255, .06);
+  border-radius: 50%;
+  bottom: -90px;
+  right: -60px;
+}
+
+.newsletter-box>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title */
+
+.newsletter-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.newsletter-title i {
+  color: #ffffff;
+  font-size: 2.6rem;
+  margin-top: 2px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .25));
+}
+
+/* Paragraph */
+
+.newsletter-box p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 45px;
+  opacity: .95;
+  line-height: 1.7;
+}
+
+/* Form */
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 0 1 500px;   /* مفيش grow خالص، بس ممكن يصغر لو المساحة ضاقت */
+  width: 100%;
+  height: 58px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  padding: 0 22px;
+  font-size: 17px;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+  transition: .3s;
+}
+.newsletter-form input::placeholder {
+  color: #888;
+}
+
+.newsletter-form input:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .28);
+}
+
+/* Button */
+
+.newsletter-form button {
+  height: 58px;
+  padding: 0 36px;
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #0B4FD9;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+}
+
+.newsletter-form button:hover {
+  background: #EAF3FF;
+  color: #083EA9;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .22);
+}
+
+/* Tablet - force input to full width before mobile breakpoint */
+
+@media (max-width: 900px) {
+  .newsletter-form input {
+    flex-basis: 100%;
+  }
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+  .newsletter-box {
+    padding: 45px 25px;
+  }
+
+  .newsletter-title {
+    font-size: 2rem;
+  }
+
+  .newsletter-title i {
+    font-size: 2rem;
+  }
+
+  .newsletter-box p {
+    font-size: 1rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  
+
+}
