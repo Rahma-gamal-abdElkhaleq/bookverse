@@ -38,14 +38,14 @@ export function Navbar(){
               ) : (
                 <Link className="nav-link" to={"/Login"}>Login</Link>
               )}
-
-              {user && (
-                <span className="hellow" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                  {`Hi ! ${user.displayName || user.email}`}
-                  <i className="bx bx-smile" aria-hidden="true" style={{ fontSize: "1.2em", color: "#1a3d8f" }} />
-                </span>
-              )}
             </div>
+
+            {user && (
+              <span className="hellow ms-auto" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                {`Hi ! ${user.displayName || user.email}`}
+                <i className="bx bx-smile" aria-hidden="true" style={{ fontSize: "1.2em", color: "#1a3d8f" }} />
+              </span>
+            )}
           </div>
         </div>
       </nav>

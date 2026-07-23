@@ -125,9 +125,12 @@ function BookDetails(){
 
                   <h5 style={{ color: "#0b4fd9" }}>Description</h5>
 
-                  <p style={{ textAlign: "justify" }}>
-                    {book.description || "No description available."}
-                  </p>
+                  <div
+  style={{ textAlign: "justify" }}
+  dangerouslySetInnerHTML={{
+    __html: book.description || "No description available."
+  }}
+/>
 
                   <a
                     href={book.previewLink}

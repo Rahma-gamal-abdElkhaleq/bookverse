@@ -1,12 +1,3 @@
-@media screen and (min-width:990px) {
-    .hellow{
-      position: relative;
-      left: 800px;
-
-    }
-
-    
-}
 .footer-heart {
   color: #1a3d8f; /* نفس لون البراند الأزرق بدل الأحمر */
   margin-left: 4px;
@@ -15,4 +6,19 @@
 
 .footer-heart:hover {
   color: #e63946; /* يتلون أحمر بس وقت الـ hover كتفاعل بصري */
+}
+
+.hellow {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hellow {
+    max-width: 100%;
+    white-space: normal;
+  }
 }
