@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+#  BookVerse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Discover Your Next Favorite Book** — a React-based book discovery platform that lets users search millions of books, view detailed information, and save personal favorites tied to their account.
 
-## Available Scripts
+🔗 **Live Demo:** [bookverse-hkpx.vercel.app](https://bookverse-hkpx.vercel.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+##  Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Book Search** — Search millions of books via the Google Books API, with pagination ("Load More") and result count tracking.
+- **Book Details Page** — Author, category, publisher, publish date, page count, language, and rating for each book.
+- **User Authentication** — Sign up and log in securely with email/password using Firebase Authentication.
+- **Cloud-Synced Favorites** — Save favorite books to your account via Cloud Firestore. Favorites persist across devices and sessions — log in from anywhere and your list is there.
+- **Guest Mode** — Users who aren't logged in can still save favorites locally in their browser (`localStorage`), with no account required.
+- **Responsive Design** — Fully responsive layout across desktop, tablet, and mobile.
+- **Resilient API Handling** — Automatic retry logic with exponential backoff for transient `503` errors from the Google Books API, so temporary rate-limiting doesn't break the user experience.
+- **Curated Sections** — Trending categories and featured authors to help users discover books without needing to search.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+##  Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend**
+- React 19 (Hooks, Context API)
+- React Router v7
+- Bootstrap 5
+- Boxicons
 
-### `npm run build`
+**Backend / Services**
+- Firebase Authentication (Email/Password)
+- Cloud Firestore (per-user favorites storage)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**API**
+- Google Books API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Deployment**
+- Vercel (CI/CD via GitHub integration)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+##  Notable Technical Decisions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Custom `useFavorites` hook** — abstracts away *where* favorites are stored (Firestore for logged-in users, `localStorage` for guests), so components like `Home` and `Favorites` don't need to know the difference.
+- **Retry logic with backoff** — the Google Books free-tier API occasionally returns `503 Service Unavailable` under load. Instead of surfacing an error immediately, failed requests are retried up to 3 times with increasing delay before falling back to a user-facing message.
+- **Race-condition safe fetching** — search requests use an `AbortController` and an `ignore` flag so that stale responses (from a previous search term or page) never overwrite newer results.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Running Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+\`\`\`bash
+# Clone the repository
+git clone https://github.com/Rahma-gamal-abdElkhaleq/bookverse.git
+cd bookverse
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Add environment variables (see below), then run
+npm start
+\`\`\`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Environment Variables
 
-### Code Splitting
+Create a `.env` file in the project root with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+\`\`\`
+REACT_APP_GOOGLE_BOOKS_API_KEY=your_google_books_api_key
+\`\`\`
 
-### Analyzing the Bundle Size
+Firebase configuration is included directly in `src/firebase.js` (safe to expose client-side; access is protected via Firestore/Auth security rules, not by hiding the config).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+##  Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This is a front-end focused portfolio project. There is no custom backend server — authentication and data persistence are handled by Firebase as a backend-as-a-service.
+- Occasional search delays are due to Google Books API rate-limiting on its free tier, not the application itself; retry logic is in place to minimize user impact.
