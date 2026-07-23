@@ -2,7 +2,7 @@
 
 **Discover Your Next Favorite Book** — a React-based book discovery platform that lets users search millions of books, view detailed information, and save personal favorites tied to their account.
 
-🔗 **Live Demo:** [bookverse-hkpx.vercel.app](https://bookverse-hkpx.vercel.app)
+🔗 **Live Demo:** [bookverse-ldpc.vercel.app](https://bookverse-ldpc.vercel.app)
 
 ---
 
