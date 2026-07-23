@@ -1,6 +1,4 @@
-import logo from './Images/Logo.webp';
 import './App.css';
-import { Navbar } from './component/Navbar/Navbar';
 import Home from './Home/Home'
 import { Layout } from './LayOut';
 import About from "./pages/About/About"

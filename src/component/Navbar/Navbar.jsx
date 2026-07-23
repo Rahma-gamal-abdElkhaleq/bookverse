@@ -21,7 +21,7 @@ export function Navbar(){
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div className="container-fluid">
-          <Link className="navbar-brand " to={"/"}><h1><img src={logo} width="70px" height="70px" className="rounded-circle" /></h1></Link>
+          <Link className="navbar-brand " to={"/"}><h1><img src={logo} width="70px" height="70px" className="rounded-circle" alt="BookVerse Logo" /></h1></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
